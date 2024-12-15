@@ -1,0 +1,31 @@
+<div class="p-3">
+<div mat-dialog-content class="space-y-2">
+  <form [formGroup]="formEditAd">
+
+  <mat-form-field class="w-full">
+    <mat-label>title</mat-label>
+    <input matInput formControlName="title"/>
+  </mat-form-field>
+
+  <mat-form-field class="w-full">
+    <mat-label>description</mat-label>
+    <textarea matInput formControlName="description"></textarea>
+  </mat-form-field>
+
+  <mat-form-field class="w-full">
+    <mat-label>location</mat-label>
+    <input matInput formControlName="location" />
+  </mat-form-field>
+</form>
+
+
+  <!-- <mat-form-field class="w-full">
+    <input matInput [(ngModel)]="editedAd.category" placeholder="Category" />
+  </mat-form-field> -->
+</div>
+
+<div mat-dialog-actions class="m-3 flex gap-2">
+  <button class="!bg-red-500 hover:!bg-red-700" mat-flat-button mat-dialog-close>Cancel</button>
+  <button class="!bg-green-500 hover:!bg-green-700" mat-flat-button color="primary" (click)="onSave()">Save</button>
+</div>
+</div>

@@ -1,0 +1,21 @@
+<mat-card class="shadow-lg hover:shadow-2xl transition">
+  <mat-card-header>
+    <mat-card-title>{{ ad().title }}</mat-card-title>
+    <mat-card-subtitle class="!flex items-center !my-3">
+      <mat-icon>location_on</mat-icon>
+      {{ ad().location }}
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ ad().description }}</p>
+  </mat-card-content>
+  <mat-card-footer class="bg-gray-300">
+    <p class="text-sm text-gray-600 pt-2 ps-2">{{ ad().createdAt | date:'dd/MM/yyyy' }}</p>
+  </mat-card-footer>
+  <mat-card-actions>
+    <div class="space-x-2">
+      <button (click)="openEditDialog()" mat-flat-button color="basic" class="!bg-blue-500 hover:!bg-blue-700">Edit</button>
+      <button (click)="openConfirmDialog()" mat-flat-button class="!bg-red-500 hover:!bg-red-700">Delete</button>
+    </div>
+  </mat-card-actions>
+</mat-card>
